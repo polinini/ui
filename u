@@ -1,0 +1,16 @@
+function isPerfectNumber($number) {
+    $sum = 0;
+    for ($i = 1; $i < $number; $i++) {
+        if ($number % $i == 0) {
+            $sum += $i;
+        }
+    }
+    return $sum == $number;
+}
+
+$number = 28;
+if (isPerfectNumber($number)) {
+    echo $number . " является совершенным числом";
+} else {
+    echo $number . " не является совершенным числом";
+}
